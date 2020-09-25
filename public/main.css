@@ -1,0 +1,19 @@
+*{ box-sizing: border-box;}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+pre {
+    flex: 1;
+    overflow: auto;
+    white-space: pre-wrap;
+}
+input, pre {
+    font: normal 20px monospace;
+}
