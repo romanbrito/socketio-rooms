@@ -10,8 +10,10 @@ if (!room) {
 const socket = io();
 
 socket.on('connect', () => {
-    connected = true;
-    socket.emit('join', { room });
+    if (!connected) {
+        connected = true;
+        socket.emit('join', { room });
+    }
 });
 
 socket.on('message', (data) => {
